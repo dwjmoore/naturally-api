@@ -1,0 +1,48 @@
+Monsieur
+Madame
+est
+sont
+un
+une
+un homme
+un femme
+un garçon
+une fille
+et
+aussi
+un chat
+un chien
+ce
+c'
+est-ce ...?
+sont-ce ...?
+oui
+non
+le
+l'
+la
+les
+qui ...?
+a
+ont
+de
+d'
+un père
+une mère
+un fils
+une fille
+il
+ils
+elle
+elles
+a-t-il ...?
+a-t-elle ...?
+ont-ils ...?
+ont-elles ...?
+un frère
+une sœur
+ne...pas
+n'...pas
+sont-ils ...?
+c'est
+deux
