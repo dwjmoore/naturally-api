@@ -11,6 +11,7 @@ bcrypt = "*"
 flask-session = "*"
 python-dotenv = "*"
 redis = "*"
+gunicorn = "*"
 
 [dev-packages]
 
