@@ -26,10 +26,10 @@ CORS(app, resources={r"/*": {"origins": "*"}}, supports_credentials=True)
 app.config.from_object(ApplicationConfig)
 
 server_session = Session(app)
+
 @app.route('/', methods = ['POST', 'GET'])
 def home():
     return "Naturally API"
-
 
 @app.route('/register', methods = ['POST'])
 def register():

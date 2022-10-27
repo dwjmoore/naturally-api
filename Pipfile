@@ -6,11 +6,9 @@ name = "pypi"
 [packages]
 flask = "*"
 flask-cors = "*"
-flask-jwt-extended = "*"
 bcrypt = "*"
 flask-session = "*"
 python-dotenv = "*"
-redis = "*"
 gunicorn = "*"
 
 [dev-packages]
