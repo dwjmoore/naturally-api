@@ -10,3 +10,4 @@ class ApplicationConfig:
     SESSION_PERMANENT = False
     SESSION_USE_SIGNER = True
     SESSION_COOKIE_SECURE = True
+    SESSION_COOKIE_SAMESITE= 'None'
