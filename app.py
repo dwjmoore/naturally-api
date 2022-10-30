@@ -1,4 +1,4 @@
-from flask import Flask, request, jsonify, session
+from flask import Flask, request, jsonify
 from flask_cors import CORS
 from flask_session import Session
 
@@ -10,10 +10,11 @@ from route_logout import logout
 from route_admin_login import admin_login
 from route_check_language import check_language
 from route_set_language import set_language
-from route_receive_contact_messages import receive_messages
+from route_insert_contact_messages import insert_messages
 from route_post_blog_posts import post_blog_posts
 from route_get_blog_posts import get_blog_posts
 from route_get_blog_post import get_blog_post
+from route_insert_blog_post import insert_blog_post
 from route_edit_blog_posts import edit_blog_posts
 from route_get_contact_messages import get_messages
 from route_get_textbook import get_textbook
@@ -76,6 +77,11 @@ def api_get_blog_posts():
 def api_get_blog_post(blog_post_id):
     return jsonify(get_blog_post(blog_post_id))
 
+@app.route("/blog/insert", methods=["POST"])
+def api_insert_blog_post():
+    blog_post = request.get_json()
+    return jsonify(insert_blog_post(blog_post))
+
 @app.route("/blog/edit", methods=["PUT"])
 def api_edit_blog_posts():
     blog_post = request.get_json()
@@ -84,7 +90,7 @@ def api_edit_blog_posts():
 @app.route("/contact", methods=["POST"])
 def api_contact():
     message = request.get_json()
-    return jsonify(receive_messages(message))
+    return jsonify(insert_messages(message))
 
 @app.route("/contact/admin", methods=["GET"])
 def api_contact_admin():

@@ -1,14 +1,14 @@
 import sqlite3
 from datetime import datetime
 
-def receive_messages(message):
-    time = datetime.now().strftime("%Y-%m-%d, %H:%M")
+def insert_messages(message):
+    date = datetime.now().strftime("%Y-%m-%d, %H:%M")
 
     con = sqlite3.connect("database.db")
     cur = con.cursor()
 
     cur.execute("INSERT INTO contact_messages (datetime,name,email,subject,message) VALUES (?,?,?,?,?)",
-        (time,
+        (date,
         message['name'],
         message['email'],
         message['subject'],

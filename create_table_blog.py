@@ -12,7 +12,7 @@ def create_blog_db():
             blog_post_id    INTEGER PRIMARY KEY NOT NULL,
             date    TEXT    NOT NULL,
             title   TEXT    NOT NULL,
-            body    TEXT    NOT NULL,
+            body    TEXT,
             image   BLOB
         );
     """)
