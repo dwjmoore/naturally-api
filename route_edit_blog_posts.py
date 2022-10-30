@@ -13,9 +13,10 @@ def edit_blog_posts(blog_post):
     con = sqlite3.connect('database.db')
     cur = con.cursor()
 
-    cur.execute("Update blog SET title = ?, body = ? WHERE blog_post_id = ?",
+    cur.execute("Update blog SET title = ?, body = ?, image = ? WHERE blog_post_id = ?",
         (blog_post['title'],
         blog_post['body'],
+        blog_post['image'],
         blog_post['blog_post_id'])
     )
 
