@@ -5,7 +5,7 @@ def get_blog_posts():
     con = sqlite3.connect('database.db')
     con.row_factory = sqlite3.Row
     cur = con.cursor()
-    cur.execute("SELECT * FROM blog")
+    cur.execute("SELECT * FROM blog ORDER BY blog_post_id DESC")
     rows = cur.fetchall()
 
     blog_posts = []
