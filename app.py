@@ -106,33 +106,22 @@ def api_contact_admin():
 def api_delete_messages(id):
     return delete_messages(id)
 
-@app.route("/textbook", methods=["GET"])
-def api_get_chapters():
-    return jsonify(get_chapters())
+@app.route("/textbook/<language>", methods=["GET"])
+def api_get_chapters(language):
+    print("Request received")
+    return jsonify(get_chapters(language))
 
 @app.route("/textbook/<language>/<chapter>", methods=["GET"])
 def api_get_chapter(language, chapter):
-    lang_chap = {
-        'language': language,
-        'chapter': chapter
-    }
-    return jsonify(get_chapter(lang_chap))
+    return jsonify(get_chapter(language, chapter))
 
 @app.route("/vocab/<language>/<chapter>", methods=["GET"])
 def api_get_vocab(language, chapter):
-    lang_chap = {
-        'language': language,
-        'chapter': chapter
-    }
-    return jsonify(get_vocab(lang_chap))
+    return jsonify(get_vocab(language, chapter))
 
 @app.route("/exercises/fill-in-blank/<language>/<chapter>", methods=["GET"])
 def api_get_fill_in_blank(language, chapter):
-    lang_chap = {
-        'language': language,
-        'chapter': chapter
-    }
-    return jsonify(get_random_sentence(lang_chap))
+    return jsonify(get_random_sentence(language, chapter))
 
 if __name__ == "__main__":
     app.run()
