@@ -6,12 +6,17 @@ def insert_blog_post(post):
     email = session.get("email")
     user_type = session.get("user_type")
     
+    
     if not email:
         return jsonify({"error": "Unauthorized"}), 401
     if user_type != 1980:
         return jsonify({"error": "Unauthorized"}), 401
 
-    date = datetime.now().strftime("%Y-%m-%d, %H:%M")
+    #extracting base64 data from file sent by the front end
+    image_data = post['image']
+    image_dataURL = str(image_data['dataURL'])
+
+    date = datetime.now().strftime("%m-%d-%Y")
 
     con = sqlite3.connect('database.db')
     cur = con.cursor()
@@ -20,10 +25,10 @@ def insert_blog_post(post):
         (date,
         post['title'],
         post['body'],
-        post['image'])
+        image_dataURL)
     )
 
     con.commit()
     con.close
 
-    return jsonify({"msg" : "Success!"})
+    return jsonify({"msg" : "Success!", })

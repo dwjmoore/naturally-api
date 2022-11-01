@@ -5,7 +5,7 @@ def create_contact_db():
     print("Opened database successfully")
     cur = con.cursor()
 
-    cur.execute("DROP TABLE contact_messages")
+    #cur.execute("DROP TABLE contact_messages")
 
     cur.execute("""
         CREATE TABLE contact_messages (

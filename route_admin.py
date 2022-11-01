@@ -5,8 +5,8 @@ def admin():
     user_type = session.get("user_type")
     
     if not email:
-        return jsonify({"error": "Unauthorized"}), 401
+        return jsonify({"auth": False}), 200
     if user_type != 1980:
-        return jsonify({"error": "Unauthorized"}), 401
+        return jsonify({"auth": False}), 200
     
-    return jsonify({"msg": "You are an authorized user for admin privileges."}), 200
+    return jsonify({"auth": True}), 200

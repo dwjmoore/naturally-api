@@ -5,7 +5,7 @@ def create_text_db():
     print("Opened database successfully")
     cur = con.cursor()
 
-    cur.execute("DROP TABLE textbook")
+    #cur.execute("DROP TABLE textbook")
 
     cur.execute("""
         CREATE TABLE textbook (

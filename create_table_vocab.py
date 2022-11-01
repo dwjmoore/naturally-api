@@ -5,7 +5,7 @@ def create_vocab_db():
     print("Opened database successfully")
     cur = con.cursor()
 
-    cur.execute("DROP TABLE vocab")
+    #cur.execute("DROP TABLE vocab")
 
     cur.execute("""
         CREATE TABLE vocab (

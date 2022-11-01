@@ -6,7 +6,7 @@ def create_user_db():
     print("Opened database successfully")
     cur = con.cursor()
 
-    cur.execute("DROP TABLE users")
+    #cur.execute("DROP TABLE users")
 
     cur.execute("""
         CREATE TABLE users (

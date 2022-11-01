@@ -55,6 +55,10 @@ def api_admin_login():
     user = request.get_json()
     return admin_login(user)
 
+@app.route("/admin", methods=["GET"])
+def api_admin():
+    return admin()
+
 @app.route("/check-language", methods=["GET"])
 def api_check_language():
     return check_language()
@@ -80,7 +84,7 @@ def api_get_blog_post(blog_post_id):
 @app.route("/blog/insert", methods=["POST"])
 def api_insert_blog_post():
     blog_post = request.get_json()
-    return jsonify(insert_blog_post(blog_post))
+    return insert_blog_post(blog_post)
 
 @app.route("/blog/edit", methods=["PUT"])
 def api_edit_blog_posts():
@@ -122,10 +126,6 @@ def api_get_fill_in_blank(language, chapter):
         'chapter': chapter
     }
     return jsonify(get_random_sentence(lang_chap))
-
-@app.route("/admin", methods=["GET"])
-def api_admin():
-    return admin()
 
 if __name__ == "__main__":
     app.run()
