@@ -13,5 +13,6 @@ def get_blog_post(blog_post_id):
     blog_post["title"] = row["title"]
     blog_post["body"] = row["body"]
     blog_post["image"] = row["image"]
+    blog_post["image_url"] = row["image_url"]
     
     return blog_post

@@ -21,11 +21,12 @@ def insert_blog_post(post):
     con = sqlite3.connect('database.db')
     cur = con.cursor()
 
-    cur.execute("INSERT INTO blog (date, title, body, image) VALUES (?,?,?,?)",
+    cur.execute("INSERT INTO blog (date, title, body, image, image_url) VALUES (?,?,?,?,?)",
         (date,
         post['title'],
         post['body'],
-        image_dataURL)
+        image_dataURL,
+        post['image_url'])
     )
 
     con.commit()

@@ -5,7 +5,7 @@ def create_blog_db():
     print("Opened database successfully")
     cur = con.cursor()
 
-    #cur.execute("DROP TABLE blog")
+    cur.execute("DROP TABLE blog")
 
     cur.execute("""
         CREATE TABLE blog (
@@ -13,7 +13,8 @@ def create_blog_db():
             date    TEXT    NOT NULL,
             title   TEXT    NOT NULL,
             body    TEXT,
-            image   BLOB
+            image   BLOB,
+            image_url   TEXT
         );
     """)
 
@@ -107,10 +108,13 @@ post_5 = {
 }
 
 create_blog_db()
+
+"""
 insert_blog_post(post_1)
 insert_blog_post(post_2)
 insert_blog_post(post_3)
 insert_blog_post(post_4)
 insert_blog_post(post_5)
+"""
 
 print("Tasks complete")
