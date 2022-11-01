@@ -5,14 +5,15 @@ def create_text_db():
     print("Opened database successfully")
     cur = con.cursor()
 
-    #cur.execute("DROP TABLE textbook")
+    cur.execute("DROP TABLE textbook")
 
     cur.execute("""
         CREATE TABLE textbook (
             language    TEXT NOT NULL,
             chapter INTEGER NOT NULL,
             title   TEXT    NOT NULL,
-            text    TEXT    NOT NULL
+            text    TEXT    NOT NULL,
+            link  TEXT    NOT NULL
         );
     """)
 
@@ -23,11 +24,12 @@ def insert_text(text):
     con = sqlite3.connect('database.db')
     cur = con.cursor()
 
-    cur.execute("INSERT INTO textbook (language,chapter,title,text) VALUES (?,?,?,?)",
+    cur.execute("INSERT INTO textbook (language,chapter,title,text,link) VALUES (?,?,?,?,?)",
         (text["language"],
         text["chapter"],
         text["title"],
-        text["text"])
+        text["text"],
+        text["link"])
     )
 
     con.commit()
@@ -65,35 +67,40 @@ fr_chapter_1 = {
     "language" : "french",
     "chapter" : 1,
     "title" : "Les Duclos",
-    "text" : fr_text_1
+    "text" : fr_text_1,
+    "link" : "https://www.youtube.com/embed/0uS5WSeH8iM"
 }
 
 fr_chapter_2 = {
     "language" : "french",
     "chapter" : 2,
     "title" : "La Famille",
-    "text" : fr_text_2
+    "text" : fr_text_2,
+    "link" : "https://www.youtube.com/embed/4nICZv-3gKM"
 }
 
 fr_chapter_3 = {
     "language" : "french",
     "chapter" : 3,
-    "title" : "L’Année",
-    "text" : fr_text_3
+    "title" : "L'Année",
+    "text" : fr_text_3,
+    "link" : "https://www.youtube.com/embed/_QpT2pKbRX8"
 }
 
 fr_chapter_4 = {
     "language" : "french",
     "chapter" : 4,
     "title" : "Les Grand-parents",
-    "text" : fr_text_4
+    "text" : fr_text_4,
+    "link" : "https://www.youtube.com/embed/2hbie2bpsVM"
 }
 
 fr_chapter_5 = {
     "language" : "french",
     "chapter" : 5,
     "title" : "Villes et Pays",
-    "text" : fr_text_5
+    "text" : fr_text_5,
+    "link" : "https://www.youtube.com/embed/2Ks9-QJAt9E"
 }
 
 insert_text(fr_chapter_1)
@@ -162,8 +169,10 @@ i_chapter_5 = {
     "text" : i_text_5
 }
 
+"""
 insert_text(i_chapter_1)
 insert_text(i_chapter_2)
 insert_text(i_chapter_3)
 insert_text(i_chapter_4)
 insert_text(i_chapter_5)
+"""

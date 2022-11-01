@@ -18,7 +18,8 @@ from route_insert_blog_post import insert_blog_post
 from route_edit_blog_posts import edit_blog_posts
 from route_get_contact_messages import get_messages
 from route_delete_contact_messages import delete_messages
-from route_get_textbook import get_textbook
+from route_get_chapters import get_chapters
+from route_get_chapter import get_chapter
 from route_get_vocab import get_vocab
 from route_get_fill_in_blank import get_random_sentence
 from route_admin import admin
@@ -105,17 +106,19 @@ def api_contact_admin():
 def api_delete_messages(id):
     return delete_messages(id)
 
+@app.route("/textbook", methods=["GET"])
+def api_get_chapters():
+    return jsonify(get_chapters())
+
 @app.route("/textbook/<language>/<chapter>", methods=["GET"])
-#Add private route credentials
-def api_get_textbook(language, chapter):
+def api_get_chapter(language, chapter):
     lang_chap = {
         'language': language,
         'chapter': chapter
     }
-    return jsonify(get_textbook(lang_chap))
+    return jsonify(get_chapter(lang_chap))
 
 @app.route("/vocab/<language>/<chapter>", methods=["GET"])
-#Add private route credentials
 def api_get_vocab(language, chapter):
     lang_chap = {
         'language': language,
@@ -124,7 +127,6 @@ def api_get_vocab(language, chapter):
     return jsonify(get_vocab(lang_chap))
 
 @app.route("/exercises/fill-in-blank/<language>/<chapter>", methods=["GET"])
-#Add private route credentials
 def api_get_fill_in_blank(language, chapter):
     lang_chap = {
         'language': language,
