@@ -17,6 +17,7 @@ from route_get_blog_post import get_blog_post
 from route_insert_blog_post import insert_blog_post
 from route_edit_blog_posts import edit_blog_posts
 from route_get_contact_messages import get_messages
+from route_delete_contact_messages import delete_messages
 from route_get_textbook import get_textbook
 from route_get_vocab import get_vocab
 from route_get_fill_in_blank import get_random_sentence
@@ -99,6 +100,10 @@ def api_contact():
 @app.route("/contact/admin", methods=["GET"])
 def api_contact_admin():
     return jsonify(get_messages())
+
+@app.route("/contact/delete/<id>", methods=["DELETE"])
+def api_delete_messages(id):
+    return delete_messages(id)
 
 @app.route("/textbook/<language>/<chapter>", methods=["GET"])
 #Add private route credentials

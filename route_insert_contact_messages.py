@@ -2,7 +2,7 @@ import sqlite3
 from datetime import datetime
 
 def insert_messages(message):
-    date = datetime.now().strftime("%Y-%m-%d, %H:%M")
+    date = datetime.now().strftime("%m-%d-%Y, %H:%M")
 
     con = sqlite3.connect("database.db")
     cur = con.cursor()

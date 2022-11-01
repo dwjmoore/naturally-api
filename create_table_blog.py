@@ -5,7 +5,7 @@ def create_blog_db():
     print("Opened database successfully")
     cur = con.cursor()
 
-    cur.execute("DROP TABLE blog")
+    #cur.execute("DROP TABLE blog")
 
     cur.execute("""
         CREATE TABLE blog (

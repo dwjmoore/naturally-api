@@ -32,4 +32,18 @@ def insert_blog_post(post):
     con.commit()
     con.close
 
-    return jsonify({"msg" : "Success!", })
+    con_2 = sqlite3.connect('database.db')
+    con_2.row_factory = sqlite3.Row
+    cur_2 = con_2.cursor()
+    cur_2.execute("SELECT * FROM blog ORDER BY blog_post_id DESC LIMIT 1")
+    row = cur_2.fetchone()
+
+    blog_post = {}
+    blog_post["blog_post_id"] = row["blog_post_id"]
+    blog_post["date"] = row["date"]
+    blog_post["title"] = row["title"]
+    blog_post["body"] = row["body"]
+    blog_post["image"] = row["image"]
+    blog_post["image_url"] = row["image_url"]
+
+    return jsonify(blog_post)

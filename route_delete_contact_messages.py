@@ -1,7 +1,7 @@
 import sqlite3
 from flask import jsonify, session
 
-def edit_blog_posts(blog_post):
+def delete_messages(id):
     email = session.get("email")
     user_type = session.get("user_type")
     
@@ -10,18 +10,13 @@ def edit_blog_posts(blog_post):
     if user_type != 1980:
         return jsonify({"error": "Unauthorized"}), 401
 
+    id = int(id)
+
     con = sqlite3.connect('database.db')
     cur = con.cursor()
 
-    cur.execute("Update blog SET title = ?, body = ?, image = ?, image_url = ? WHERE blog_post_id = ?",
-        (blog_post['title'],
-        blog_post['body'],
-        blog_post['image'],
-        blog_post['image_url'],
-        blog_post['blog_post_id'])
-    )
-
+    cur.execute("DELETE FROM contact_messages WHERE message_id = ?", [id])
     con.commit()
-    con.close
+    cur.close()
 
-    return blog_post
+    return jsonify({"msg" : "Success!" })
