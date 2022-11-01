@@ -9,8 +9,9 @@ def get_blog_post(blog_post_id):
 
     blog_post = {}
     blog_post["blog_post_id"] = row["blog_post_id"]
-    blog_post["title"] = row["title"]
     blog_post["date"] = row["date"]
+    blog_post["title"] = row["title"]
     blog_post["body"] = row["body"]
+    blog_post["image"] = row["image"]
     
     return blog_post
