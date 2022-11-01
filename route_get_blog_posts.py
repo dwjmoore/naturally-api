@@ -16,6 +16,7 @@ def get_blog_posts():
         blog_post["date"] = i["date"]
         blog_post["title"] = i["title"]
         blog_post["body"] = i["body"]
+        blog_post["image"] = i["image"]
         
         blog_posts.append(blog_post)
     
