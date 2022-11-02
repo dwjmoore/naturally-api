@@ -18,12 +18,8 @@ Jean et Henri.
 un frère.
 Henri.
 deux sœurs.
-mère, c'est Madame Duclos.
-père, c'est Monsieur Duclos.
-chiens, ce sont Médor et Fido.
 fille.
 garçon.
-'homme; c'est Monsieur Duclos.
 fils de Monsieur et Madame Duclos.
 fille.
 sœur d'Yvonne, de Jean et d'Henri.

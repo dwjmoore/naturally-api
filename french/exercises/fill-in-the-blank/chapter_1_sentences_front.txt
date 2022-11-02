@@ -1,36 +1,32 @@
-Monsieur Duclos est un _____ 
-Madame Duclos est une _____ 
-Jean et Henri sont deux _____ 
-Nicole et Yvonne sont deux _____ 
-Médor est le chien _____ 
-Minet est le chat _____
-Monsieur Duclos est le _____ 
-Madame Duclos est la _____ 
-Jean et Henri sont les _____ 
-Monsieur et Madame Duclos ont aussi deux _____
-Médor et Fido _____ 
-Jean _____
-Yvonne _____ 
-Minet _____ 
-Jean et Henri _____ 
-Monsieur et Madame Duclos _____ 
-Les fils de Monsieur et Madame Duclos, ce _____ 
-Jean _____ 
-Le frère de Jean, c'_____ 
-Jean et Henri _____ 
-_____ 
-_____ 
-_____ 
-Yvonne est _____ 
-Henri est _____ 
-_____ 
-Les deux garçons sont _____ 
-Nicole est _____ 
-Nicole est _____ 
-Fido est _____ 
-Fido, c'est _____ 
-Henri a un frère; _____ 
-Nicole et Yvonne sont deux filles; _____ 
-Yvonne n'a pas un chien; _____ 
-Les fils de Monsieur et Madame Duclos, ce sont Jean et Henri; _____ 
-Monsieur et Madame Duclos ont deux fils; _____ 
+Monsieur Duclos est un
+Madame Duclos est une
+Jean et Henri sont deux
+Nicole et Yvonne sont deux
+Médor est le chien
+Minet est le chat
+Monsieur Duclos est le
+Madame Duclos est la
+Jean et Henri sont les
+Monsieur et Madame Duclos ont aussi deux
+Médor et Fido
+Jean
+Yvonne
+Minet
+Jean et Henri 
+Monsieur et Madame Duclos
+Les fils de Monsieur et Madame Duclos, ce
+Jean
+Le frère de Jean, c'
+Jean et Henri
+Yvonne est
+Henri est
+Les deux garçons sont
+Nicole est
+Nicole est
+Fido est
+Fido, c'est
+Henri a un frère;
+Nicole et Yvonne sont deux filles;
+Yvonne n'a pas un chien;
+Les fils de Monsieur et Madame Duclos, ce sont Jean et Henri;
+Monsieur et Madame Duclos ont deux fils;
