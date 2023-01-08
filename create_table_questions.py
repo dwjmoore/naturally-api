@@ -5,7 +5,7 @@ def create_questions_db():
     print("Opened database successfully")
     cur = con.cursor()
 
-    cur.execute("DROP TABLE fill_in_blank")
+    cur.execute("DROP TABLE questions")
 
     cur.execute("""
         CREATE TABLE questions (
