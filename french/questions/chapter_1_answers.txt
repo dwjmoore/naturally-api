@@ -1,0 +1,9 @@
+Oui, Jean est un garçon.
+Oui, Henri a un frère.
+Le père de Jean est Monsieur Duclos.
+Non. Nicole n'est pas un garçon. Elle est une fille.
+Oui. Yvonne a un sœur.
+La sœur d'Yvonne est Nicole.
+Le père et la mère sont Monsieur et Madame Duclos.
+Oui. Ils ont deux fils. Les deux fils sont Jean et Henri.
+Non. Nicole et Yvonne n'ont pas deux sœurs. Ils ont deux frères.

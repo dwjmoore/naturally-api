@@ -1,0 +1,9 @@
+Jean, est-ce un garçon?
+Henri, a-t-il un frère?
+Qui est le père de Jean?
+Nicole, est-ce un garçon?
+Yvonne, a-t-elle un sœur?
+Qui est la sœur d'Yvonne?
+Qui sont le père et la mère?
+Le père et la mère, ont-ils deux fils?
+Nicole et Yvonne, ont-elles deux sœurs?
