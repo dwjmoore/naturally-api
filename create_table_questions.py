@@ -5,7 +5,7 @@ def create_questions_db():
     print("Opened database successfully")
     cur = con.cursor()
 
-    # cur.execute("DROP TABLE fill_in_blank")
+    cur.execute("DROP TABLE fill_in_blank")
 
     cur.execute("""
         CREATE TABLE questions (
@@ -28,7 +28,7 @@ def insert_questions(questions, answers):
     chapter = 1
 
     for i in range(len(questions)):
-        cur.execute("INSERT INTO fill_in_blank (language,chapter,question,answer) VALUES (?,?,?,?)",
+        cur.execute("INSERT INTO questions (language,chapter,question,answer) VALUES (?,?,?,?)",
             (language,
             chapter,
             questions[i],
