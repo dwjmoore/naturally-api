@@ -1,6 +1,7 @@
 from flask import Flask, request, jsonify
 from flask_cors import CORS
 from flask_session import Session
+from threading import Thread
 
 from config import ApplicationConfig
 from route_register_user import register_user
@@ -24,7 +25,7 @@ from route_get_vocab import get_vocab
 from route_get_fill_in_blank import get_random_sentence
 from route_admin import admin
 
-app = Flask(__name__)
+app = Flask('')
 CORS(app, resources={r"/*": {"origins": "*"}}, supports_credentials=True)
 app.config.from_object(ApplicationConfig)
 
@@ -123,5 +124,8 @@ def api_get_vocab(language, chapter):
 def api_get_fill_in_blank(language, chapter):
     return jsonify(get_random_sentence(language, chapter))
 
-if __name__ == "__main__":
-    app.run()
+def run():
+	app.run(host='0.0.0.0', port=8080)
+
+t = Thread(target=run)
+t.start()
