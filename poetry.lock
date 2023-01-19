@@ -118,6 +118,14 @@ python-versions = ">=3.7"
 cli = ["click (>=5.0)"]
 
 [[package]]
+name = "pytz"
+version = "2022.7.1"
+description = "World timezone definitions, modern and historical"
+category = "main"
+optional = false
+python-versions = "*"
+
+[[package]]
 name = "six"
 version = "1.16.0"
 description = "Python 2 and 3 compatibility utilities"
@@ -154,7 +162,7 @@ testing = ["pytest (>=6)", "pytest-checkdocs (>=2.4)", "flake8 (<5)", "pytest-co
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.8"
-content-hash = "520ed86a0d2c3bf334e75cc225bb3c12a76710b412fc51981372bbde8836505a"
+content-hash = "2f7c0ffbc9c0d7f6c7fc10f2a849afdcc49e1588b80c4228a381c71b7c21f153"
 
 [metadata.files]
 bcrypt = []
@@ -167,6 +175,7 @@ itsdangerous = []
 jinja2 = []
 markupsafe = []
 python-dotenv = []
+pytz = []
 six = []
 werkzeug = []
 zipp = []
